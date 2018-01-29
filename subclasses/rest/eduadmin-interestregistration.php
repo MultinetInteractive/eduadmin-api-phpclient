@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class EduAdmin_REST_InterestRegistration
+ */
 class EduAdmin_REST_InterestRegistration extends EduAdminRESTClient {
 	protected $api_url = "/v1/InterestRegistration";
 

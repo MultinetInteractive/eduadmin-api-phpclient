@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class EduAdmin_REST_Report
+ */
 class EduAdmin_REST_Report extends EduAdminRESTClient {
 	protected $api_url = "/v1/Report";
 

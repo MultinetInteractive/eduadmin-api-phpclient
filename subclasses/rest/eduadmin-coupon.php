@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class EduAdmin_REST_Coupon
+ */
 class EduAdmin_REST_Coupon extends EduAdminRESTClient {
 	protected $api_url = "/v1/Coupon";
 

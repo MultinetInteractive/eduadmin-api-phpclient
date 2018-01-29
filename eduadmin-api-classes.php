@@ -807,3 +807,15 @@ class EduAdmin_Data_ReportOptionParameter {
 	/** @var string */
 	public $Value = null;
 }
+
+/**
+ * Class EduAdmin_Data_ProgrammeBooking_Patch
+ */
+class EduAdmin_Data_ProgrammeBooking_Patch {
+	/** @var boolean|null $Preliminary */
+	public $Preliminary = null;
+	/** @var boolean|null $Paid */
+	public $Paid = null;
+	/** @var string|null $Notes */
+	public $Notes = null;
+}

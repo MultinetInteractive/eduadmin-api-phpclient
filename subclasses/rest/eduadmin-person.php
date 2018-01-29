@@ -1,8 +1,17 @@
 <?php
 
+/**
+ * Class EduAdmin_REST_Person
+ */
 class EduAdmin_REST_Person extends EduAdminRESTClient {
 	protected $api_url = "/v1/Person";
 
+	/**
+	 * @param EduAdmin_Data_Person $person
+	 * @param bool $skipDuplicateMatch
+	 *
+	 * @return mixed
+	 */
 	public function Create( EduAdmin_Data_Person $person, $skipDuplicateMatch = false ) {
 		$query = array();
 		if ( $skipDuplicateMatch ) {
@@ -15,6 +24,11 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 		);
 	}
 
+	/**
+	 * @param EduAdmin_Data_Person $person
+	 *
+	 * @return mixed
+	 */
 	public function Update( EduAdmin_Data_Person $person ) {
 		return parent::PATCH( "",
 			$person,
@@ -22,6 +36,11 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 		);
 	}
 
+	/**
+	 * @param EduAdmin_Data_Login $login
+	 *
+	 * @return mixed
+	 */
 	public function Login( EduAdmin_Data_Login $login ) {
 		return parent::POST( "Login",
 			$login,

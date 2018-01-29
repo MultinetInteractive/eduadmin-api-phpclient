@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class EduAdmin_REST_Booking
+ */
 class EduAdmin_REST_Booking extends EduAdminRESTClient {
 	protected $api_url = "/v1/Booking";
 
