@@ -18,11 +18,11 @@ class EduAdmin_REST_Participant extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $participantId
-	 * @param EduAdmin_Data_AddParticipantSession[] ...$sessions
+	 * @param EduAdmin_Data_Sessions[] ...$sessions
 	 *
 	 * @return mixed
 	 */
-	public function AddToSessions( $participantId, EduAdmin_Data_AddParticipantSession... $sessions ) {
+	public function AddToSessions( $participantId, EduAdmin_Data_Sessions... $sessions ) {
 		return parent::POST(
 			"/$participantId/AddToSessions",
 			$sessions,
@@ -91,71 +91,4 @@ class EduAdmin_REST_Participant extends EduAdminRESTClient {
 			get_called_class() . "|" . __FUNCTION__
 		);
 	}
-}
-
-class EduAdmin_Data_AddParticipantSession {
-	/** @var integer|null $SessionId */
-	public $SessionId = null;
-	/** @var integer|null $PriceNameId */
-	public $PriceNameId = null;
-}
-
-class EduAdmin_Data_ArrivalStatus {
-	/** @var integer|null $EventDateId */
-	public $EventDateId = null;
-	/** @var integer|null $ParticipantId */
-	public $ParticipantId = null;
-	/** @var string|null $Comment */
-	public $Comment = null;
-}
-
-class EduAdmin_Data_GradeData {
-	/** @var integer[]|null $ParticipantIds */
-	public $ParticipantIds = null;
-	/** @var integer|null $GradeId */
-	public $GradeId = null;
-}
-
-class EduAdmin_Data_ParticipantData {
-	/** @var string|null $FirstName */
-	public $FirstName = null;
-	/** @var string|null $LastName */
-	public $LastName = null;
-	/** @var string|null $Address */
-	public $Address = null;
-	/** @var string|null $Address2 */
-	public $Address2 = null;
-	/** @var string|null $Zip */
-	public $Zip = null;
-	/** @var string|null $City */
-	public $City = null;
-	/** @var string|null $Mobile */
-	public $Mobile = null;
-	/** @var string|null $Phone */
-	public $Phone = null;
-	/** @var string|null $Email */
-	public $Email = null;
-	/** @var string|null $CivicRegistrationNumber */
-	public $CivicRegistrationNumber = null;
-	/** @var string|null $EmployeeNumber */
-	public $EmployeeNumber = null;
-	/** @var string|null $JobTitle */
-	public $JobTitle = null;
-	/** @var string|null $Country */
-	public $Country = null;
-	/** @var string|null $Reference */
-	public $Reference = null;
-	/** @var string|null $Password */
-	public $Password = null;
-	/** @var boolean|null $CanLogin */
-	public $CanLogin = null;
-	/** @var EADPD_CustomFields[]|null $CustomFields */
-	public $CustomFields = null;
-}
-
-class EADPD_CustomFields {
-	/** @var integer|null $CustomFieldId */
-	public $CustomFieldId = null;
-	/** @var object|null $CustomFieldValue */
-	public $CustomFieldValue = null;
 }

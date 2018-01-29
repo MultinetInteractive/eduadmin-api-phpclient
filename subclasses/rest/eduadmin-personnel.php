@@ -3,7 +3,7 @@
 class EduAdmin_REST_Personnel extends EduAdminRESTClient {
 	protected $api_url = "/v1/Personnel";
 
-	public function Login( EduAdmin_Data_PersonnelLogin $login ) {
+	public function Login( EduAdmin_Data_Login $login ) {
 		return parent::POST( "Login",
 			$login,
 			get_called_class() . "|" . __FUNCTION__
@@ -50,11 +50,4 @@ class EduAdmin_REST_Personnel extends EduAdminRESTClient {
 			get_called_class() . "|" . __FUNCTION__
 		);
 	}
-}
-
-class EduAdmin_Data_PersonnelLogin {
-	/** @var string|null $Email */
-	public $Email = null;
-	/** @var string|null $Password */
-	public $Password = null;
 }

@@ -22,7 +22,7 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 		);
 	}
 
-	public function Login( EduAdmin_Data_PersonLogin $login ) {
+	public function Login( EduAdmin_Data_Login $login ) {
 		return parent::POST( "Login",
 			$login,
 			get_called_class() . "|" . __FUNCTION__
@@ -69,56 +69,4 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 			get_called_class() . "|" . __FUNCTION__
 		);
 	}
-}
-
-
-class EduAdmin_Data_PersonLogin {
-	/** @var string|null $Email */
-	public $Email = null;
-	/** @var string|null $Password */
-	public $Password = null;
-}
-
-class EduAdmin_Data_Person {
-	/** @var string|null $FirstName */
-	public $FirstName = null;
-	/** @var string|null $LastName */
-	public $LastName = null;
-	/** @var string|null $Address */
-	public $Address = null;
-	/** @var string|null $Address2 */
-	public $Address2 = null;
-	/** @var string|null $Zip */
-	public $Zip = null;
-	/** @var string|null $City */
-	public $City = null;
-	/** @var string|null $Mobile */
-	public $Mobile = null;
-	/** @var string|null $Phone */
-	public $Phone = null;
-	/** @var string|null $Email */
-	public $Email = null;
-	/** @var string|null $CivicRegistrationNumber */
-	public $CivicRegistrationNumber = null;
-	/** @var string|null $EmployeeNumber */
-	public $EmployeeNumber = null;
-	/** @var string|null $JobTitle */
-	public $JobTitle = null;
-	/** @var string|null $Country */
-	public $Country = null;
-	/** @var string|null $Password */
-	public $Password = null;
-	/** @var integer|null $CustomerId */
-	public $CustomerId = null;
-	/** @var boolean|null $CanLogin */
-	public $CanLogin = null;
-	/** @var EADP_CustomFields[]|null $CustomFields */
-	public $CustomFields = null;
-}
-
-class EADP_CustomFields {
-	/** @var integer|null $CustomFieldId */
-	public $CustomFieldId = null;
-	/** @var object|null $CustomFieldValue */
-	public $CustomFieldValue = null;
 }
