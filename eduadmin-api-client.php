@@ -175,7 +175,6 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 				'grant_type' => 'password'
 			), "GetToken", false );
 			$this->api_token = new EduAdminToken( $result );
-			print_r( $this->api_token );
 
 			return $this->api_token;
 		}
