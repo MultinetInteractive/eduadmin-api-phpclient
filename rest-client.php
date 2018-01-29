@@ -14,7 +14,7 @@ class EduAdminRESTClient {
 	 */
 	static $api_pass = null;
 
-	static $root_url = 'https://devapi.legaonline.se';
+	static $root_url = 'https://api.eduadmin.se';
 
 	protected $api_url = '';
 
