@@ -72,5 +72,5 @@ And the current endpoints in the `REST`-property is:
 Each of these endpoints contain their own methods, but it also inherits from `EduAdminRESTClient`,
 so you will have access to `GET`, `POST`, `PATCH`, `PUT` and `DELETE` methods.
 
-You can check out the [API documentation (Swagger)](https://devapi.legaonline.se/swagger/ui/index#/) yourself,
+You can check out the [API documentation (Swagger)](https://api.eduadmin.se/swagger/ui/index#/) yourself,
 if you want to make something yourself.
