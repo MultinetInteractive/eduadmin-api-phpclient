@@ -153,7 +153,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			add_action( 'eduadmin-showtimers', array( $this, 'RenderTimers' ) );
 		}
 
-		private function RenderTimers() {
+		public function RenderTimers() {
 			echo "<!-- EduAdmin API (OData/REST) Client - Timers -->\n";
 			$totalValue = 0;
 			foreach ( EDUAPI()->timers as $timer => $value ) {
