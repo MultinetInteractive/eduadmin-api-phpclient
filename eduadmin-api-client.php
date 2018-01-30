@@ -149,6 +149,19 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->REST->Personnel            = new EduAdmin_REST_Personnel();
 			$this->REST->ProgrammeBooking     = new EduAdmin_REST_ProgrammeBooking();
 			$this->REST->Report               = new EduAdmin_REST_Report();
+
+			add_action( 'eduadmin-showtimers', array( $this, 'RenderTimers' ) );
+		}
+
+		private function RenderTimers() {
+			echo "<!-- EduAdmin API (OData/REST) Client - Timers -->\n";
+			$totalValue = 0;
+			foreach ( EDUAPI()->timers as $timer => $value ) {
+				echo "<!-- " . $timer . ": " . round( $value * 1000, 2 ) . "ms -->\n";
+				$totalValue += $value;
+			}
+			echo "<!-- EduAdmin Total: " . round( $totalValue * 1000, 2 ) . "ms -->\n";
+			echo "<!-- /EduAdmin API (OData/REST) Client - Timers -->\n";
 		}
 
 		/**
