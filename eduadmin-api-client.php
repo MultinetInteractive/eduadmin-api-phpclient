@@ -85,6 +85,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once( "subclasses/odata/eduadmin-coursetemplates.php" );
 			include_once( "subclasses/odata/eduadmin-customergroups.php" );
 			include_once( "subclasses/odata/eduadmin-customers.php" );
+			include_once( "subclasses/odata/eduadmin-customfields.php" );
 			include_once( "subclasses/odata/eduadmin-events.php" );
 			include_once( "subclasses/odata/eduadmin-grades.php" );
 			include_once( "subclasses/odata/eduadmin-interestregistrations.php" );
@@ -96,6 +97,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once( "subclasses/odata/eduadmin-programmestarts.php" );
 			include_once( "subclasses/odata/eduadmin-regions.php" );
 			include_once( "subclasses/odata/eduadmin-reports.php" );
+			include_once( "subclasses/odata/eduadmin-subjects.php" );
 			/* /OData Classes */
 
 			/* REST Classes */
@@ -123,6 +125,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->OData->CourseTemplates       = new EduAdmin_OData_CourseTemplates();
 			$this->OData->CustomerGroups        = new EduAdmin_OData_CustomerGroups();
 			$this->OData->Customers             = new EduAdmin_OData_Customers();
+			$this->OData->CustomFields          = new EduAdmin_OData_CustomFields();
 			$this->OData->Events                = new EduAdmin_OData_Events();
 			$this->OData->Grades                = new EduAdmin_OData_Grades();
 			$this->OData->InterestRegistrations = new EduAdmin_OData_InterestRegistrations();
@@ -134,6 +137,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->OData->ProgrammeStarts       = new EduAdmin_OData_ProgrammeStarts();
 			$this->OData->Regions               = new EduAdmin_OData_Regions();
 			$this->OData->Reports               = new EduAdmin_OData_Reports();
+			$this->OData->Subjects              = new EduAdmin_OData_Subjects();
 
 			// Load REST classes
 			$this->REST = new EduAdmin_RESTHolder();
