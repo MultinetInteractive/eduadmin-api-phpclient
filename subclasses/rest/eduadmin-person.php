@@ -8,7 +8,7 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 
 	/**
 	 * @param EduAdmin_Data_Person $person
-	 * @param bool $skipDuplicateMatch
+	 * @param bool                 $skipDuplicateMatch
 	 *
 	 * @return mixed
 	 */
@@ -50,16 +50,15 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $personId
-	 * @param string $password
+	 * @param string  $password
 	 *
 	 * @return mixed
 	 */
 	public function LoginById( $personId, $password ) {
 		return parent::POST( "/$personId/Login",
-			array(
-				'password' => $password
-			),
-			get_called_class() . "|" . __FUNCTION__
+			array('' => $password),
+			get_called_class() . "|" . __FUNCTION__,
+			false
 		);
 	}
 
@@ -83,7 +82,7 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 	public function SendResetPasswordEmail( $email ) {
 		return parent::POST( "/SendResetPasswordEmail",
 			array(
-				'email' => $email
+				'email' => $email,
 			),
 			get_called_class() . "|" . __FUNCTION__
 		);
