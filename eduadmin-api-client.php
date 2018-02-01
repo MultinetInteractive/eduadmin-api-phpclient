@@ -13,12 +13,10 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 		 * @var EduAdminToken API Token
 		 */
 		public $api_token = null;
-
 		/**
 		 * @var array
 		 */
 		public $timers;
-
 		/**
 		 * @var EduAdminRESTClient
 		 */
@@ -192,7 +190,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$result          = $this->rest->POST( "/token", array(
 				'username'   => EduAdminRESTClient::$api_user,
 				'password'   => EduAdminRESTClient::$api_pass,
-				'grant_type' => 'password'
+				'grant_type' => 'password',
 			), "GetToken", false );
 			$this->api_token = new EduAdminToken( $result );
 
