@@ -49,11 +49,11 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $programmeBookingId
-	 * @param EduAdmin_Data_ProgrammeBooking_Patch $patch
+	 * @param EduAdmin_Data_ProgrammeBooking_Patch|stdClass|object $patch
 	 *
 	 * @return mixed
 	 */
-	public function PatchBooking( $programmeBookingId, EduAdmin_Data_ProgrammeBooking_Patch $patch ) {
+	public function PatchBooking( $programmeBookingId, $patch ) {
 		return parent::PATCH(
 			"/$programmeBookingId",
 			$patch,

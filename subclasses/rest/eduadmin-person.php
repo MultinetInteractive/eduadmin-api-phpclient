@@ -8,7 +8,7 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 
 	/**
 	 * @param EduAdmin_Data_Person $person
-	 * @param bool                 $skipDuplicateMatch
+	 * @param bool $skipDuplicateMatch
 	 *
 	 * @return mixed
 	 */
@@ -25,12 +25,13 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 	}
 
 	/**
-	 * @param EduAdmin_Data_Person $person
+	 * @param integer $personId
+	 * @param EduAdmin_Data_Person|stdClass|object $person
 	 *
 	 * @return mixed
 	 */
-	public function Update( EduAdmin_Data_Person $person ) {
-		return parent::PATCH( "",
+	public function Update( $personId, $person ) {
+		return parent::PATCH( "/$personId",
 			$person,
 			get_called_class() . "|" . __FUNCTION__
 		);
@@ -50,13 +51,13 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $personId
-	 * @param string  $password
+	 * @param string $password
 	 *
 	 * @return mixed
 	 */
 	public function LoginById( $personId, $password ) {
 		return parent::POST( "/$personId/Login",
-			array('' => $password),
+			array( '' => $password ),
 			get_called_class() . "|" . __FUNCTION__,
 			false
 		);

@@ -20,11 +20,11 @@ class EduAdmin_REST_Customer extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $customerId
-	 * @param EduAdmin_Data_Customer $customer
+	 * @param EduAdmin_Data_Customer|stdClass|object $customer
 	 *
 	 * @return mixed
 	 */
-	public function Update( $customerId, EduAdmin_Data_Customer $customer ) {
+	public function Update( $customerId, $customer ) {
 		return parent::PATCH( "$customerId",
 			$customer,
 			get_called_class() . "|" . __FUNCTION__
