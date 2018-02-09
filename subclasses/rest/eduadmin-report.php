@@ -8,11 +8,11 @@ class EduAdmin_REST_Report extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $reportId
-	 * @param EduAdmin_Data_ReportOptions $options
+	 * @param EduAdmin_Data_ReportOptions|stdClass|object $options
 	 *
 	 * @return mixed
 	 */
-	public function CreateUrl( $reportId, EduAdmin_Data_ReportOptions $options ) {
+	public function CreateUrl( $reportId, $options ) {
 		return parent::POST( "/$reportId/CreateUrl", $options, get_called_class() . "|" . __FUNCTION__ );
 	}
 }

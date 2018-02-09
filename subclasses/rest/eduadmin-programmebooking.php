@@ -7,11 +7,11 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 	protected $api_url = "/v1/ProgrammeBooking";
 
 	/**
-	 * @param EduAdmin_Data_ProgrammeBooking $programmeBooking
+	 * @param EduAdmin_Data_ProgrammeBooking|stdClass|object $programmeBooking
 	 *
 	 * @return mixed
 	 */
-	public function Book( EduAdmin_Data_ProgrammeBooking $programmeBooking ) {
+	public function Book( $programmeBooking ) {
 		return parent::POST(
 			"",
 			$programmeBooking,
@@ -21,11 +21,11 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $programmeBookingId
-	 * @param EduAdmin_Data_Mail $pbEmail
+	 * @param EduAdmin_Data_Mail|stdClass|object $pbEmail
 	 *
 	 * @return mixed
 	 */
-	public function SendEmail( $programmeBookingId, EduAdmin_Data_Mail $pbEmail ) {
+	public function SendEmail( $programmeBookingId, $pbEmail ) {
 		return parent::POST(
 			"/$programmeBookingId/Email/Send",
 			$pbEmail,
@@ -35,11 +35,11 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $programmeBookingId
-	 * @param EduAdmin_Data_MailAdvanced $pbEmail
+	 * @param EduAdmin_Data_MailAdvanced|stdClass|object $pbEmail
 	 *
 	 * @return mixed
 	 */
-	public function SendEmailAdvanced( $programmeBookingId, EduAdmin_Data_MailAdvanced $pbEmail ) {
+	public function SendEmailAdvanced( $programmeBookingId, $pbEmail ) {
 		return parent::POST(
 			"/$programmeBookingId/Email/SendAdvanced",
 			$pbEmail,

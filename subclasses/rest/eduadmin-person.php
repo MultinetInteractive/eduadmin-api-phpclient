@@ -7,12 +7,12 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 	protected $api_url = "/v1/Person";
 
 	/**
-	 * @param EduAdmin_Data_Person $person
+	 * @param EduAdmin_Data_Person|stdClass|object $person
 	 * @param bool $skipDuplicateMatch
 	 *
 	 * @return mixed
 	 */
-	public function Create( EduAdmin_Data_Person $person, $skipDuplicateMatch = false ) {
+	public function Create( $person, $skipDuplicateMatch = false ) {
 		$query = array();
 		if ( $skipDuplicateMatch ) {
 			$query["skipDuplicateMatch"] = "true";
@@ -38,11 +38,11 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 	}
 
 	/**
-	 * @param EduAdmin_Data_Login $login
+	 * @param EduAdmin_Data_Login|stdClass|object $login
 	 *
 	 * @return mixed
 	 */
-	public function Login( EduAdmin_Data_Login $login ) {
+	public function Login( $login ) {
 		return parent::POST( "Login",
 			$login,
 			get_called_class() . "|" . __FUNCTION__

@@ -7,11 +7,11 @@ class EduAdmin_REST_Personnel extends EduAdminRESTClient {
 	protected $api_url = "/v1/Personnel";
 
 	/**
-	 * @param EduAdmin_Data_Login $login
+	 * @param EduAdmin_Data_Login|stdClass|object $login
 	 *
 	 * @return mixed
 	 */
-	public function Login( EduAdmin_Data_Login $login ) {
+	public function Login( $login ) {
 		return parent::POST( "Login",
 			$login,
 			get_called_class() . "|" . __FUNCTION__

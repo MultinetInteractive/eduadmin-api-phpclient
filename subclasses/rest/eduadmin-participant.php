@@ -71,11 +71,11 @@ class EduAdmin_REST_Participant extends EduAdminRESTClient {
 	}
 
 	/**
-	 * @param EduAdmin_Data_GradeData $grade_data
+	 * @param EduAdmin_Data_GradeData|stdClass|object $grade_data
 	 *
 	 * @return mixed
 	 */
-	public function Grade( EduAdmin_Data_GradeData $grade_data ) {
+	public function Grade( $grade_data ) {
 		return parent::POST( "/Grade",
 			$grade_data,
 			get_called_class() . "|" . __FUNCTION__
