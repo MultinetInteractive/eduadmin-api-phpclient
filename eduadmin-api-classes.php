@@ -27,15 +27,15 @@ class EduAdminToken {
 	 */
 	public function __construct( $obj ) {
 		if ( null === $obj ) {
-			die( "Could not deserialize the token" );
+			die( 'Could not deserialize the token' );
 		}
 
-		$this->AccessToken = $obj["access_token"];
-		$this->TokenType   = $obj["token_type"];
-		$this->ExpiresIn   = $obj["expires_in"];
-		$this->UserName    = $obj["userName"];
-		$this->Issued      = strtotime( $obj[".issued"] );
-		$this->Expires     = strtotime( $obj[".expires"] );
+		$this->AccessToken = $obj['access_token'];
+		$this->TokenType   = $obj['token_type'];
+		$this->ExpiresIn   = $obj['expires_in'];
+		$this->UserName    = $obj['userName'];
+		$this->Issued      = strtotime( $obj['.issued'] );
+		$this->Expires     = strtotime( $obj['.expires'] );
 	}
 
 	/**
@@ -43,7 +43,11 @@ class EduAdminToken {
 	 * @return bool
 	 */
 	public function IsValid() {
-		return strtotime( "now" ) < $this->Expires;
+		if ( ! empty( $this->Expires ) ) {
+			return strtotime( 'now' ) < $this->Expires;
+		}
+
+		return false;
 	}
 }
 
@@ -51,43 +55,43 @@ class EduAdminToken {
  * Class EduAdmin_ODataHolder
  */
 class EduAdmin_ODataHolder {
-	/** @var EduAdmin_OData_Bookings|null */
+	/** @var EduAdmin_OData_Bookings */
 	public $Bookings = null;
-	/** @var EduAdmin_OData_Categories|null */
+	/** @var EduAdmin_OData_Categories */
 	public $Categories = null;
-	/** @var EduAdmin_OData_CourseLevels|null */
+	/** @var EduAdmin_OData_CourseLevels */
 	public $CourseLevels = null;
-	/** @var EduAdmin_OData_CourseTemplates|null */
+	/** @var EduAdmin_OData_CourseTemplates */
 	public $CourseTemplates = null;
-	/** @var EduAdmin_OData_CustomerGroups|null */
+	/** @var EduAdmin_OData_CustomerGroups */
 	public $CustomerGroups = null;
-	/** @var EduAdmin_OData_Customers|null */
+	/** @var EduAdmin_OData_Customers */
 	public $Customers = null;
-	/** @var EduAdmin_OData_CustomFields|null  */
+	/** @var EduAdmin_OData_CustomFields */
 	public $CustomFields = null;
-	/** @var EduAdmin_OData_Events|null */
+	/** @var EduAdmin_OData_Events */
 	public $Events = null;
-	/** @var EduAdmin_OData_Grades|null */
+	/** @var EduAdmin_OData_Grades */
 	public $Grades = null;
-	/** @var EduAdmin_OData_InterestRegistrations|null */
+	/** @var EduAdmin_OData_InterestRegistrations */
 	public $InterestRegistrations = null;
-	/** @var EduAdmin_OData_Locations|null */
+	/** @var EduAdmin_OData_Locations */
 	public $Locations = null;
-	/** @var EduAdmin_OData_Personnel|null */
+	/** @var EduAdmin_OData_Personnel */
 	public $Personnel = null;
-	/** @var EduAdmin_OData_Persons|null */
+	/** @var EduAdmin_OData_Persons */
 	public $Persons = null;
-	/** @var EduAdmin_OData_ProgrammeBookings|null */
+	/** @var EduAdmin_OData_ProgrammeBookings */
 	public $ProgrammeBookings = null;
-	/** @var EduAdmin_OData_Programmes|null */
+	/** @var EduAdmin_OData_Programmes */
 	public $Programmes = null;
-	/** @var EduAdmin_OData_ProgrammeStarts|null */
+	/** @var EduAdmin_OData_ProgrammeStarts */
 	public $ProgrammeStarts = null;
-	/** @var EduAdmin_OData_Regions|null */
+	/** @var EduAdmin_OData_Regions */
 	public $Regions = null;
-	/** @var EduAdmin_OData_Reports|null */
+	/** @var EduAdmin_OData_Reports */
 	public $Reports = null;
-	/** @var EduAdmin_OData_Subjects|null  */
+	/** @var EduAdmin_OData_Subjects */
 	public $Subjects = null;
 }
 
@@ -95,27 +99,27 @@ class EduAdmin_ODataHolder {
  * Class EduAdmin_RESTHolder
  */
 class EduAdmin_RESTHolder {
-	/** @var EduAdmin_REST_Booking|null */
+	/** @var EduAdmin_REST_Booking */
 	public $Booking = null;
-	/** @var EduAdmin_REST_Coupon|null */
+	/** @var EduAdmin_REST_Coupon */
 	public $Coupon = null;
-	/** @var EduAdmin_REST_Customer|null */
+	/** @var EduAdmin_REST_Customer */
 	public $Customer = null;
-	/** @var EduAdmin_REST_Event|null */
+	/** @var EduAdmin_REST_Event */
 	public $Event = null;
-	/** @var EduAdmin_REST_InterestRegistration|null */
+	/** @var EduAdmin_REST_InterestRegistration */
 	public $InterestRegistration = null;
-	/** @var EduAdmin_REST_Organisation|null */
+	/** @var EduAdmin_REST_Organisation */
 	public $Organisation = null;
-	/** @var EduAdmin_REST_Participant|null */
+	/** @var EduAdmin_REST_Participant */
 	public $Participant = null;
-	/** @var EduAdmin_REST_Person|null */
+	/** @var EduAdmin_REST_Person */
 	public $Person = null;
-	/** @var EduAdmin_REST_Personnel|null */
+	/** @var EduAdmin_REST_Personnel */
 	public $Personnel = null;
-	/** @var EduAdmin_REST_ProgrammeBooking|null */
+	/** @var EduAdmin_REST_ProgrammeBooking */
 	public $ProgrammeBooking = null;
-	/** @var EduAdmin_REST_Report|null */
+	/** @var EduAdmin_REST_Report */
 	public $Report = null;
 }
 
