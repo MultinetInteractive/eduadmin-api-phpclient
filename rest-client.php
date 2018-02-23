@@ -25,7 +25,6 @@ class EduAdminRESTClient {
 		$r   = curl_exec( $curl );
 		$i   = curl_getinfo( $curl );
 		$obj = array();
-
 		if ( false === $r || ( json_decode( $r ) && isset( json_decode( $r )->error ) ) || ( $i['http_code'] < 200 || $i['http_code'] > 299 ) ) {
 			curl_close( $curl );
 			if ( json_decode( $r ) ) {
@@ -39,7 +38,11 @@ class EduAdminRESTClient {
 			return $obj;
 		}
 		curl_close( $curl );
-		$obj          = json_decode( $r, true );
+		if ( json_decode( $r, true ) ) {
+			$obj = json_decode( $r, true );
+		} else {
+			$obj['data'] = $r;
+		}
 		$obj['@curl'] = $i;
 
 		return $obj;
