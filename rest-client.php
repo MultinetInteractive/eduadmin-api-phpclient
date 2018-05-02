@@ -38,10 +38,15 @@ class EduAdminRESTClient {
 			return $obj;
 		}
 		curl_close( $curl );
-		if ( null !== json_decode( $r, true ) ) {
+		if ( ( substr( $r, 0, 1 ) === '{' || substr( $r, 0, 1 ) === '[' )
+		     && null !== json_decode( $r, true ) ) {
 			$obj = json_decode( $r, true );
 		} else {
-			$obj['data'] = $r;
+			if ( substr( $r, 0, 1 ) === '"' ) {
+				$obj['data'] = json_decode( $r, true );
+			} else {
+				$obj['data'] = $r;
+			}
 		}
 		$obj['@curl'] = $i;
 
