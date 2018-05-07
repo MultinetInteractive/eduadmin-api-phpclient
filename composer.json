@@ -11,10 +11,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.2",
+    "multinetinteractive/eduadmin-wordpress": "*",
     "composer/installers": "~1"
-  },
-  "autoload": {
-    "files": ["eduadmin-api-client.php"],
-    "exlude-from-classmap": ["/tests/"]
   }
 }
