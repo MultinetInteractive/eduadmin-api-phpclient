@@ -131,6 +131,8 @@ class EduAdmin_RESTHolder {
 	public $Personnel = null;
 	/** @var EduAdmin_REST_ProgrammeBooking */
 	public $ProgrammeBooking = null;
+	/** @var EduAdmin_REST_ProgrammeStart */
+	public $ProgrammeStart = null;
 	/** @var EduAdmin_REST_Report */
 	public $Report = null;
 }
