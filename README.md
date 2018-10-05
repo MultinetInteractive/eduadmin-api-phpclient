@@ -5,7 +5,7 @@ to be able to use the API-client against [EduAdmin](https://www.eduadmin.se)
 
 This will enable the global command `EDUAPI()`, which is a singleton instance of the client.
 
-Don't forget to call `EDUAPI()->SetCredentials( $api_user, $api_pass )` and
+Don't forget to call `EDUAPI()->SetAuthentication( $api_user, $api_pass )` and
 then fetch a token by calling `EDUAPI()->GetToken()`.
 
 This token is currently valid for two weeks, so save it somewhere safe.
