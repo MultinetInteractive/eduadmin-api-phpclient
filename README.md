@@ -26,7 +26,6 @@ Here's a list of the current endpoints in the `OData`-property
 -   Grades
 -   InterestRegistrations
 -   Locations
--   Participants
 -   Personnel
 -   Persons
 -   ProgrammeBookings
