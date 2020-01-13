@@ -535,6 +535,8 @@ class EduAdmin_Data_Customer {
 	public $City = null;
 	/** @var string|null $Country */
 	public $Country = null;
+	/** @var string|null $CountryCode */
+	public $CountryCode = null;
 	/** @var string|null $OrganisationNumber */
 	public $OrganisationNumber = null;
 	/** @var string|null $Email */
@@ -577,6 +579,8 @@ class EduAdmin_Data_BillingInfo {
 	public $City = null;
 	/** @var string|null $Country */
 	public $Country = null;
+	/** @var string|null $CountryCode */
+	public $CountryCode = null;
 	/** @var string|null $OrganisationNumber */
 	public $OrganisationNumber = null;
 	/** @var string|null $VatNumber */
