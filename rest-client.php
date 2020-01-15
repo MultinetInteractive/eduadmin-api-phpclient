@@ -22,6 +22,21 @@ class EduAdminRESTClient {
 	 * @return mixed
 	 */
 	private function execute_request( $curl ) {
+		$headers = array();
+
+		curl_setopt( $curl, CURLOPT_HEADERFUNCTION, function ( $curl, $header ) use ( &$headers ) {
+			$len    = strlen( $header );
+			$header = explode( ':', $header, 2 );
+			if ( count( $header ) < 2 ) // ignore invalid headers
+			{
+				return $len;
+			}
+
+			$headers[ strtolower( trim( $header[0] ) ) ][] = trim( $header[1] );
+
+			return $len;
+		} );
+
 		$r   = curl_exec( $curl );
 		$i   = curl_getinfo( $curl );
 		$obj = array();
@@ -33,6 +48,7 @@ class EduAdminRESTClient {
 				$obj['data'] = $r;
 			}
 			$obj['@curl']  = $i;
+			$obj['@headers'] = $headers;
 			$obj['@error'] = $r;
 
 			return $obj;
@@ -49,6 +65,7 @@ class EduAdminRESTClient {
 			}
 		}
 		$obj['@curl'] = $i;
+		$obj['@headers'] = $headers;
 
 		return $obj;
 	}
