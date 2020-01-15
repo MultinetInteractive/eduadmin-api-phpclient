@@ -715,6 +715,8 @@ class EduAdmin_Data_ContactPerson {
 	public $JobTitle = null;
 	/** @var string|null $Country */
 	public $Country = null;
+	/** @var string|null $CountryCode */
+	public $CountryCode = null;
 	/** @var string|null $Password */
 	public $Password = null;
 	/** @var integer|null $PriceNameId */
