@@ -71,6 +71,8 @@ class EduAdmin_ODataHolder {
 	public $Bookings = null;
 	/** @var EduAdmin_OData_Categories */
 	public $Categories = null;
+	/** @var EduAdmin_OData_Countries */
+	public $Countries = null;
 	/** @var EduAdmin_OData_CourseLevels */
 	public $CourseLevels = null;
 	/** @var EduAdmin_OData_CourseTemplates */
