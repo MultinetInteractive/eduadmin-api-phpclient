@@ -21,6 +21,19 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 
 	/**
 	 * @param integer $programme_booking_id
+	 *
+	 * @return mixed
+	 */
+	public function DeleteBooking( $programme_booking_id ) {
+		return parent::DELETE(
+			"/$programme_booking_id",
+			array(),
+			get_called_class() . '|' . __FUNCTION__
+		);
+	}
+
+	/**
+	 * @param integer $programme_booking_id
 	 * @param EduAdmin_Data_Mail|stdClass|object $pb_email
 	 *
 	 * @return mixed
@@ -60,7 +73,7 @@ class EduAdmin_REST_ProgrammeBooking extends EduAdminRESTClient {
 			get_called_class() . '|' . __FUNCTION__
 		);
 	}
-	
+
 	/**
 	 * @param EduAdmin_Data_ProgrammeBooking|stdClass|object $booking_data
 	 *
