@@ -90,8 +90,10 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once 'subclasses/odata/eduadmin-interestregistrations.php';
 			include_once 'subclasses/odata/eduadmin-locations.php';
 			include_once 'subclasses/odata/eduadmin-participants.php';
+			include_once 'subclasses/odata/eduadmin-paymentterms.php';
 			include_once 'subclasses/odata/eduadmin-personnel.php';
 			include_once 'subclasses/odata/eduadmin-persons.php';
+			include_once 'subclasses/odata/eduadmin-pricenames.php';
 			include_once 'subclasses/odata/eduadmin-programmebookings.php';
 			include_once 'subclasses/odata/eduadmin-programmes.php';
 			include_once 'subclasses/odata/eduadmin-programmestarts.php';
@@ -102,6 +104,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 
 			/* REST Classes */
 			include_once 'subclasses/rest/eduadmin-booking.php';
+			include_once 'subclasses/rest/eduadmin-consent.php';
 			include_once 'subclasses/rest/eduadmin-coupon.php';
 			include_once 'subclasses/rest/eduadmin-customer.php';
 			include_once 'subclasses/rest/eduadmin-event.php';
@@ -133,8 +136,10 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->OData->InterestRegistrations = new EduAdmin_OData_InterestRegistrations();
 			$this->OData->Locations             = new EduAdmin_OData_Locations();
 			$this->OData->Participants          = new EduAdmin_OData_Participants();
+			$this->OData->PaymentTerms          = new EduAdmin_OData_PaymentTerms();
 			$this->OData->Personnel             = new EduAdmin_OData_Personnel();
 			$this->OData->Persons               = new EduAdmin_OData_Persons();
+			$this->OData->PriceNames            = new EduAdmin_OData_Pricenames();
 			$this->OData->ProgrammeBookings     = new EduAdmin_OData_ProgrammeBookings();
 			$this->OData->Programmes            = new EduAdmin_OData_Programmes();
 			$this->OData->ProgrammeStarts       = new EduAdmin_OData_ProgrammeStarts();
@@ -146,6 +151,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->REST = new EduAdmin_RESTHolder();
 
 			$this->REST->Booking              = new EduAdmin_REST_Booking();
+			$this->REST->Consent              = new EduAdmin_REST_Consent();
 			$this->REST->Coupon               = new EduAdmin_REST_Coupon();
 			$this->REST->Customer             = new EduAdmin_REST_Customer();
 			$this->REST->Event                = new EduAdmin_REST_Event();

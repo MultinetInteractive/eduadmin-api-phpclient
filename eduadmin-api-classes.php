@@ -99,8 +99,8 @@ class EduAdmin_ODataHolder {
 	public $Personnel = null;
 	/** @var EduAdmin_OData_Persons */
 	public $Persons = null;
-	/** @var EduAdmin_OData_Pricenames */
-	public $Pricenames = null;
+	/** @var EduAdmin_OData_PriceNames */
+	public $PriceNames = null;
 	/** @var EduAdmin_OData_ProgrammeBookings */
 	public $ProgrammeBookings = null;
 	/** @var EduAdmin_OData_Programmes */
