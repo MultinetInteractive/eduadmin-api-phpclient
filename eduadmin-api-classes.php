@@ -93,10 +93,14 @@ class EduAdmin_ODataHolder {
 	public $Locations = null;
 	/** @var EduAdmin_OData_Participants */
 	public $Participants = null;
+	/** @var EduAdmin_OData_PaymentTerms */
+	public $PaymentTerms = null;
 	/** @var EduAdmin_OData_Personnel */
 	public $Personnel = null;
 	/** @var EduAdmin_OData_Persons */
 	public $Persons = null;
+	/** @var EduAdmin_OData_Pricenames */
+	public $Pricenames = null;
 	/** @var EduAdmin_OData_ProgrammeBookings */
 	public $ProgrammeBookings = null;
 	/** @var EduAdmin_OData_Programmes */
@@ -115,18 +119,18 @@ class EduAdmin_ODataHolder {
  * Class EduAdmin_RESTHolder
  */
 class EduAdmin_RESTHolder {
-	/** @var EduAdmin_REST_Booking */
-	public $Booking = null;
+	/** @var EduAdmin_REST_Consent */
+	public $Consent = null;
 	/** @var EduAdmin_REST_Coupon */
 	public $Coupon = null;
+	/** @var EduAdmin_REST_Booking */
+	public $Booking = null;
 	/** @var EduAdmin_REST_Customer */
 	public $Customer = null;
 	/** @var EduAdmin_REST_Event */
 	public $Event = null;
 	/** @var EduAdmin_REST_InterestRegistration */
 	public $InterestRegistration = null;
-	/** @var EduAdmin_REST_Organisation */
-	public $Organisation = null;
 	/** @var EduAdmin_REST_Participant */
 	public $Participant = null;
 	/** @var EduAdmin_REST_Person */
@@ -137,6 +141,8 @@ class EduAdmin_RESTHolder {
 	public $ProgrammeBooking = null;
 	/** @var EduAdmin_REST_ProgrammeStart */
 	public $ProgrammeStart = null;
+	/** @var EduAdmin_REST_Organisation */
+	public $Organisation = null;
 	/** @var EduAdmin_REST_Report */
 	public $Report = null;
 }
