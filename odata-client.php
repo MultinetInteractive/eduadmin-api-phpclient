@@ -11,10 +11,10 @@ class EduAdminODataClient extends EduAdminRESTClient {
 	 * @param string|null $filter
 	 * @param string|null $expand
 	 * @param string|null $orderby
-	 * @param int|null $top
-	 * @param int|null $skip
-	 * @param bool $count
-	 * @param bool $use_cache
+	 * @param int|null    $top
+	 * @param int|null    $skip
+	 * @param bool        $count
+	 * @param bool        $use_cache
 	 *
 	 * @return mixed
 	 */
@@ -49,10 +49,10 @@ class EduAdminODataClient extends EduAdminRESTClient {
 	}
 
 	/**
-	 * @param int $id
+	 * @param int         $id
 	 * @param string|null $select
 	 * @param string|null $expand
-	 * @param bool $use_cache
+	 * @param bool        $use_cache
 	 *
 	 * @return mixed
 	 */
@@ -65,83 +65,84 @@ class EduAdminODataClient extends EduAdminRESTClient {
 			$params['$expand'] = $expand;
 		}
 
-		if ( ! empty( $use_cache ) && ! $use_cache ) {
-			$params['cache'] = 'false';
+		if ( ! empty( $use_cache ) && $use_cache === false ) {
 		}
+
+		$params['cache'] = 'false';
 
 		return parent::GET( "($id)", $params, get_called_class() . '|' . __FUNCTION__ );
 	}
 
 	/**
-	 * @deprecated Not allowed in OData
-	 *
-	 * @param string $endpoint
+	 * @param string       $endpoint
 	 * @param array|object $params
-	 * @param string $method_name
-	 * @param bool $is_json
+	 * @param string       $method_name
+	 * @param bool         $is_json
 	 *
 	 * @return mixed|void
 	 * @throws Exception
+	 * @deprecated Not allowed in OData
+	 *
 	 */
 	final public function GET( $endpoint, $params, $method_name, $is_json = true ) {
 		throw new Exception( 'This is OData, not REST, use Search or GetItem' );
 	}
 
 	/**
-	 * @deprecated Not allowed in OData
-	 *
-	 * @param string $endpoint
+	 * @param string       $endpoint
 	 * @param array|object $params
-	 * @param string $method_name
-	 * @param bool $is_json
+	 * @param string       $method_name
+	 * @param bool         $is_json
 	 *
 	 * @return mixed|void
 	 * @throws Exception
+	 * @deprecated Not allowed in OData
+	 *
 	 */
 	final public function POST( $endpoint, $params, $method_name, $is_json = true ) {
 		throw new Exception( 'This is OData, not REST, use Search or GetItem' );
 	}
 
 	/**
-	 * @deprecated Not allowed in OData
-	 *
-	 * @param string $endpoint
+	 * @param string       $endpoint
 	 * @param array|object $params
-	 * @param string $method_name
-	 * @param bool $is_json
+	 * @param string       $method_name
+	 * @param bool         $is_json
 	 *
 	 * @return mixed|void
 	 * @throws Exception
+	 * @deprecated Not allowed in OData
+	 *
 	 */
 	final public function PATCH( $endpoint, $params, $method_name, $is_json = true ) {
 		throw new Exception( 'This is OData, not REST, use Search or GetItem' );
 	}
 
 	/**
-	 * @deprecated Not allowed in OData
-	 *
-	 * @param string $endpoint
+	 * @param string       $endpoint
 	 * @param array|object $params
-	 * @param string $method_name
-	 * @param bool $is_json
+	 * @param string       $method_name
+	 * @param bool         $is_json
 	 *
 	 * @return mixed|void
 	 * @throws Exception
+	 * @deprecated Not allowed in OData
+	 *
 	 */
 	final public function DELETE( $endpoint, $params, $method_name, $is_json = true ) {
 		throw new Exception( 'This is OData, not REST, use Search or GetItem' );
 	}
 
 	/**
-	 * @deprecated Not allowed in OData
-	 *
-	 * @param string $endpoint
+	 * @param string       $endpoint
 	 * @param array|object $params
-	 * @param string $method_name
-	 * @param bool $is_json
+	 * @param string       $method_name
+	 * @param bool         $is_json
 	 *
 	 * @return mixed|void
 	 * @throws Exception
+	 * @deprecated Not allowed in OData
+	 *
 	 */
 	final public function PUT( $endpoint, $params, $method_name, $is_json = true ) {
 		throw new Exception( 'This is OData, not REST, use Search or GetItem' );
