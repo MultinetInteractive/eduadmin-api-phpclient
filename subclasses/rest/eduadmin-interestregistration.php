@@ -13,8 +13,8 @@ class EduAdmin_REST_InterestRegistration extends EduAdminRESTClient {
 	 */
 	public function CreateBasic( $basic ) {
 		return parent::POST( '/CreateBasic',
-			$basic,
-			get_called_class() . '|' . __FUNCTION__
+		                     $basic,
+		                     get_called_class() . '|' . __FUNCTION__
 		);
 	}
 
@@ -25,8 +25,20 @@ class EduAdmin_REST_InterestRegistration extends EduAdminRESTClient {
 	 */
 	public function CreateComplete( $complete ) {
 		return parent::POST( '/CreateComplete',
-			$complete,
-			get_called_class() . '|' . __FUNCTION__
+		                     $complete,
+		                     get_called_class() . '|' . __FUNCTION__
+		);
+	}
+
+	/**
+	 * @param integer $interest_registration_id
+	 *
+	 * @return array|mixed
+	 */
+	public function DeleteInterestRegistration( $interest_registration_id ) {
+		return parent::DELETE( "/$interest_registration_id",
+		                       array(),
+		                       get_called_class() . '|' . __FUNCTION__
 		);
 	}
 }

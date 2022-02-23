@@ -83,6 +83,10 @@ class EduAdmin_ODataHolder {
 	public $Customers = null;
 	/** @var EduAdmin_OData_CustomFields */
 	public $CustomFields = null;
+	/** @var EduAdmin_OData_EvaluationAnswers */
+	public $EvaluationAnswers = null;
+	/** @var EduAdmin_OData_Evaluations */
+	public $Evaluations = null;
 	/** @var EduAdmin_OData_Events */
 	public $Events = null;
 	/** @var EduAdmin_OData_Grades */

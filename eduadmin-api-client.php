@@ -86,6 +86,8 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once 'subclasses/odata/eduadmin-customers.php';
 			include_once 'subclasses/odata/eduadmin-customfields.php';
 			include_once 'subclasses/odata/eduadmin-events.php';
+			include_once 'subclasses/odata/eduadmin-evaluationanswers.php';
+			include_once 'subclasses/odata/eduadmin-evaluations.php';
 			include_once 'subclasses/odata/eduadmin-grades.php';
 			include_once 'subclasses/odata/eduadmin-interestregistrations.php';
 			include_once 'subclasses/odata/eduadmin-locations.php';
@@ -203,7 +205,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 				'username'   => EduAdminRESTClient::$api_user,
 				'password'   => EduAdminRESTClient::$api_pass,
 				'grant_type' => 'password',
-			), 'GetToken', false );
+			),                                    'GetToken', false );
 			$this->api_token = new EduAdminToken( $result );
 
 			return $this->api_token;
