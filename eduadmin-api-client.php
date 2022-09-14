@@ -79,6 +79,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			/* OData Classes */
 			include_once 'subclasses/odata/eduadmin-bookings.php';
 			include_once 'subclasses/odata/eduadmin-categories.php';
+			include_once 'subclasses/odata/eduadmin-certificates.php';
 			include_once 'subclasses/odata/eduadmin-countries.php';
 			include_once 'subclasses/odata/eduadmin-courselevels.php';
 			include_once 'subclasses/odata/eduadmin-coursetemplates.php';
@@ -127,6 +128,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 
 			$this->OData->Bookings              = new EduAdmin_OData_Bookings();
 			$this->OData->Categories            = new EduAdmin_OData_Categories();
+			$this->OData->Certificates          = new EduAdmin_OData_Certificates();
 			$this->OData->Countries             = new EduAdmin_OData_Countries();
 			$this->OData->CourseLevels          = new EduAdmin_OData_CourseLevels();
 			$this->OData->CourseTemplates       = new EduAdmin_OData_CourseTemplates();
