@@ -99,6 +99,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once 'subclasses/odata/eduadmin-pricenames.php';
 			include_once 'subclasses/odata/eduadmin-programmebookings.php';
 			include_once 'subclasses/odata/eduadmin-programmes.php';
+			include_once 'subclasses/odata/eduadmin-programmeinterestregistrations.php';
 			include_once 'subclasses/odata/eduadmin-programmestarts.php';
 			include_once 'subclasses/odata/eduadmin-regions.php';
 			include_once 'subclasses/odata/eduadmin-reports.php';
@@ -126,30 +127,31 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			// Load OData classes
 			$this->OData = new EduAdmin_ODataHolder();
 
-			$this->OData->Bookings              = new EduAdmin_OData_Bookings();
-			$this->OData->Categories            = new EduAdmin_OData_Categories();
-			$this->OData->Certificates          = new EduAdmin_OData_Certificates();
-			$this->OData->Countries             = new EduAdmin_OData_Countries();
-			$this->OData->CourseLevels          = new EduAdmin_OData_CourseLevels();
-			$this->OData->CourseTemplates       = new EduAdmin_OData_CourseTemplates();
-			$this->OData->CustomerGroups        = new EduAdmin_OData_CustomerGroups();
-			$this->OData->Customers             = new EduAdmin_OData_Customers();
-			$this->OData->CustomFields          = new EduAdmin_OData_CustomFields();
-			$this->OData->Events                = new EduAdmin_OData_Events();
-			$this->OData->Grades                = new EduAdmin_OData_Grades();
-			$this->OData->InterestRegistrations = new EduAdmin_OData_InterestRegistrations();
-			$this->OData->Locations             = new EduAdmin_OData_Locations();
-			$this->OData->Participants          = new EduAdmin_OData_Participants();
-			$this->OData->PaymentTerms          = new EduAdmin_OData_PaymentTerms();
-			$this->OData->Personnel             = new EduAdmin_OData_Personnel();
-			$this->OData->Persons               = new EduAdmin_OData_Persons();
-			$this->OData->PriceNames            = new EduAdmin_OData_Pricenames();
-			$this->OData->ProgrammeBookings     = new EduAdmin_OData_ProgrammeBookings();
-			$this->OData->Programmes            = new EduAdmin_OData_Programmes();
-			$this->OData->ProgrammeStarts       = new EduAdmin_OData_ProgrammeStarts();
-			$this->OData->Regions               = new EduAdmin_OData_Regions();
-			$this->OData->Reports               = new EduAdmin_OData_Reports();
-			$this->OData->Subjects              = new EduAdmin_OData_Subjects();
+			$this->OData->Bookings                       = new EduAdmin_OData_Bookings();
+			$this->OData->Categories                     = new EduAdmin_OData_Categories();
+			$this->OData->Certificates                   = new EduAdmin_OData_Certificates();
+			$this->OData->Countries                      = new EduAdmin_OData_Countries();
+			$this->OData->CourseLevels                   = new EduAdmin_OData_CourseLevels();
+			$this->OData->CourseTemplates                = new EduAdmin_OData_CourseTemplates();
+			$this->OData->CustomerGroups                 = new EduAdmin_OData_CustomerGroups();
+			$this->OData->Customers                      = new EduAdmin_OData_Customers();
+			$this->OData->CustomFields                   = new EduAdmin_OData_CustomFields();
+			$this->OData->Events                         = new EduAdmin_OData_Events();
+			$this->OData->Grades                         = new EduAdmin_OData_Grades();
+			$this->OData->InterestRegistrations          = new EduAdmin_OData_InterestRegistrations();
+			$this->OData->Locations                      = new EduAdmin_OData_Locations();
+			$this->OData->Participants                   = new EduAdmin_OData_Participants();
+			$this->OData->PaymentTerms                   = new EduAdmin_OData_PaymentTerms();
+			$this->OData->Personnel                      = new EduAdmin_OData_Personnel();
+			$this->OData->Persons                        = new EduAdmin_OData_Persons();
+			$this->OData->PriceNames                     = new EduAdmin_OData_Pricenames();
+			$this->OData->ProgrammeBookings              = new EduAdmin_OData_ProgrammeBookings();
+			$this->OData->Programmes                     = new EduAdmin_OData_Programmes();
+			$this->OData->ProgrammeInterestRegistrations = new EduAdmin_OData_ProgrammeInterestRegistrations();
+			$this->OData->ProgrammeStarts                = new EduAdmin_OData_ProgrammeStarts();
+			$this->OData->Regions                        = new EduAdmin_OData_Regions();
+			$this->OData->Reports                        = new EduAdmin_OData_Reports();
+			$this->OData->Subjects                       = new EduAdmin_OData_Subjects();
 
 			// Load REST classes
 			$this->REST = new EduAdmin_RESTHolder();

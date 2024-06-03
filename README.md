@@ -35,6 +35,7 @@ Here's a list of the current endpoints in the `OData`-property
 - PriceNames
 - ProgrammeBookings
 - Programmes
+- ProgrammeInterestRegistrations
 - ProgrammeStarts
 - Regions
 - Reports

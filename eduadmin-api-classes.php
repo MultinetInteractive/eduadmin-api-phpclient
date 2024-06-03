@@ -111,6 +111,8 @@ class EduAdmin_ODataHolder {
 	public $ProgrammeBookings = null;
 	/** @var EduAdmin_OData_Programmes */
 	public $Programmes = null;
+	/** @var EduAdmin_OData_ProgrammeInterestRegistrations */
+	public $ProgrammeInterestRegistrations = null;
 	/** @var EduAdmin_OData_ProgrammeStarts */
 	public $ProgrammeStarts = null;
 	/** @var EduAdmin_OData_Regions */
@@ -651,6 +653,72 @@ class EduAdmin_Data_InterestRegistrationComplete {
 	public $EventId = null;
 	/** @var string|null $Reference */
 	public $Reference = null;
+	/** @var integer|null $PaymentMethodId */
+	public $PaymentMethodId = null;
+	/** @var integer|null $PriceNameId */
+	public $PriceNameId = null;
+	/** @var string|null $Notes */
+	public $Notes = null;
+	/** @var string|null $PurchaseOrderNumber */
+	public $PurchaseOrderNumber = null;
+	/** @var string|null $CouponCode */
+	public $CouponCode = null;
+	/** @var string|null $PostponedBillingDate */
+	public $PostponedBillingDate = null;
+	/** @var EADIRC_Options|null $Options */
+	public $Options = null;
+	/** @var EduAdmin_Data_Customer|null $Customer */
+	public $Customer = null;
+	/** @var EduAdmin_Data_ContactPerson|null $ContactPerson */
+	public $ContactPerson = null;
+	/** @var EduAdmin_Data_Mail|null $SendConfirmationEmail */
+	public $SendConfirmationEmail = null;
+	/** @var EduAdmin_Data_Participants[]|null $Participants */
+	public $Participants = null;
+	/** @var EduAdmin_Data_UnnamedParticipants[]|null $UnnamedParticipants */
+	public $UnnamedParticipants = null;
+	/** @var EduAdmin_Data_Answers[]|null $Answers */
+	public $Answers = null;
+	/** @var EduAdmin_Data_Accessories[]|null $Accessories */
+	public $Accessories = null;
+}
+
+/**
+ * Class EduAdmin_Data_ProgrammeInterestRegistrationBasic
+ */
+class EduAdmin_Data_ProgrammeInterestRegistrationBasic {
+	/** @var integer|null $ProgrammeId */
+	public $ProgrammeId = null;
+	/** @var integer|null $ProgrammeStartId */
+	public $ProgrammeStartId = null;
+	/** @var integer|null $NumberOfParticipants */
+	public $NumberOfParticipants = null;
+	/** @var string|null $CompanyName */
+	public $CompanyName = null;
+	/** @var string|null $FirstName */
+	public $FirstName = null;
+	/** @var string|null $LastName */
+	public $LastName = null;
+	/** @var string|null $Email */
+	public $Email = null;
+	/** @var string|null $Phone */
+	public $Phone = null;
+	/** @var string|null $Mobile */
+	public $Mobile = null;
+	/** @var string|null $Notes */
+	public $Notes = null;
+}
+
+/**
+ * Class EduAdmin_Data_ProgrammeInterestRegistrationComplete
+ */
+class EduAdmin_Data_ProgrammeInterestRegistrationComplete {
+	/** @var integer|null $ProgrammeStartId */
+	public $ProgrammeStartId = null;
+	/** @var bool|null $Preliminary */
+	public $Preliminary = null;
+	/** @var bool|null $Paid */
+	public $Paid = null;
 	/** @var integer|null $PaymentMethodId */
 	public $PaymentMethodId = null;
 	/** @var integer|null $PriceNameId */

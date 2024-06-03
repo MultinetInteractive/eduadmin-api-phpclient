@@ -19,12 +19,36 @@ class EduAdmin_REST_InterestRegistration extends EduAdminRESTClient {
 	}
 
 	/**
+	 * @param EduAdmin_Data_ProgrammeInterestRegistrationBasic|stdClass|object $basic
+	 *
+	 * @return mixed
+	 */
+	public function CreateBasicProgramme( $basic ) {
+		return parent::POST( '/CreateBasicProgramme',
+		                     $basic,
+		                     get_called_class() . '|' . __FUNCTION__
+		);
+	}
+
+	/**
 	 * @param EduAdmin_Data_InterestRegistrationComplete|stdClass|object $complete
 	 *
 	 * @return mixed
 	 */
 	public function CreateComplete( $complete ) {
 		return parent::POST( '/CreateComplete',
+		                     $complete,
+		                     get_called_class() . '|' . __FUNCTION__
+		);
+	}
+
+	/**
+	 * @param EduAdmin_Data_ProgrammeInterestRegistrationComplete|stdClass|object $complete
+	 *
+	 * @return mixed
+	 */
+	public function CreateCompleteProgrammeBooking( $complete ) {
+		return parent::POST( '/CreateCompleteProgrammeBooking',
 		                     $complete,
 		                     get_called_class() . '|' . __FUNCTION__
 		);
