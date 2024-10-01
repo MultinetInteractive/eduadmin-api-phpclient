@@ -57,9 +57,8 @@ class EduAdmin_REST_Person extends EduAdminRESTClient {
 	 */
 	public function LoginById( $person_id, $password ) {
 		return parent::POST( "/$person_id/Login",
-		                     array( '' => $password ),
-		                     get_called_class() . '|' . __FUNCTION__,
-		                     false
+		                     $password,
+		                     get_called_class() . '|' . __FUNCTION__
 		);
 	}
 
