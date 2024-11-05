@@ -25,7 +25,6 @@ class EduAdminRESTClient {
 	static    $response_timeout_seconds = 5.0;
 	protected $curl_version             = null;
 	protected $php_version              = PHP_VERSION;
-	private $shown_error = false;
 
 	/**
 	 * @param \CurlHandle $curl
@@ -35,11 +34,9 @@ class EduAdminRESTClient {
 	private function execute_request( $curl ) {
 		$headers = array();
 
-		if ( function_exists( 'add_action' ) && isset( $GLOBALS['eduadmin'] ) && ! $GLOBALS['eduadmin']->api_connection && ! $this->shown_error ) {
+		if ( function_exists( 'add_action' ) && isset( $GLOBALS['eduadmin'] ) && ! $GLOBALS['eduadmin']->api_connection ) {
 			// Something is wrong with the API connection, so we will not try to execute any commands
 			curl_close( $curl );
-
-			$this->shown_error = true;
 
 			return [ '@error' => 'EduAdmin Api connection not established' ];
 		}
