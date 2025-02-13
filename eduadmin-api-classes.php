@@ -121,6 +121,8 @@ class EduAdmin_ODataHolder {
 	public $Reports = null;
 	/** @var EduAdmin_OData_Subjects */
 	public $Subjects = null;
+	/** @var EduAdmin_OData_VoucherTemplates */
+	public $VoucherTemplates = null;
 }
 
 /**

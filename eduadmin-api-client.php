@@ -104,6 +104,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			include_once 'subclasses/odata/eduadmin-regions.php';
 			include_once 'subclasses/odata/eduadmin-reports.php';
 			include_once 'subclasses/odata/eduadmin-subjects.php';
+			include_once 'subclasses/odata/eduadmin-vouchertemplates.php';
 			/* /OData Classes */
 
 			/* REST Classes */
@@ -152,6 +153,7 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 			$this->OData->Regions                        = new EduAdmin_OData_Regions();
 			$this->OData->Reports                        = new EduAdmin_OData_Reports();
 			$this->OData->Subjects                       = new EduAdmin_OData_Subjects();
+			$this->OData->VoucherTemplates               = new EduAdmin_OData_VoucherTemplates();
 
 			// Load REST classes
 			$this->REST = new EduAdmin_RESTHolder();
