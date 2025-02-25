@@ -184,6 +184,13 @@ class EduAdmin_Data_Voucher {
 }
 
 /**
+ * Class EduAdmin_Data_CreateVoucher
+ */
+class EduAdmin_Data_CreateVoucher {
+
+}
+
+/**
  * Class EduAdmin_Data_MailAdvanced
  */
 class EduAdmin_Data_MailAdvanced {
