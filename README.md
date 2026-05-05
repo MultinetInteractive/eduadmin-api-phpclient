@@ -1,7 +1,7 @@
 # EduAdmin API Client
 
 Include `eduadmin-api-client.php` in the pages you want to be able to use the API-client
-against [EduAdmin](https://www.eduadmin.se)
+against [EduAdmin](https://www.eduadmin.com)
 
 This will enable the global command `EDUAPI()`, which is a singleton instance of the client.
 
