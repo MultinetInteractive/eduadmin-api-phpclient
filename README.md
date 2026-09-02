@@ -82,4 +82,13 @@ The current endpoints in the `REST`-property is:
 Each of these endpoints contain their own methods, but it also inherits from `EduAdminRESTClient`, so you will have
 access to `GET`, `POST`, `PATCH`, `PUT` and `DELETE` methods.
 
+---
+
+There's a new method to help escaping OData parameters:
+```php
+// Escapes the OData value by replacing single quotes with double quotes,
+// must be used with other sanitizing functions.
+edu_odata_quote( $value );
+```
+
 You can check out the [API documentation](https://api.eduadmin.se/) yourself, if you want to make something yourself.

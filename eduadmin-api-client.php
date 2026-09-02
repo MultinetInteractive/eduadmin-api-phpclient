@@ -225,6 +225,20 @@ if ( ! class_exists( 'EduAdmin_OData_Client' ) ) {
 		}
 	}
 
+	if ( ! function_exists( 'edu_odata_quote' ) ) {
+		/**
+		 * Escapes the OData value by replacing single quotes with double quotes,
+		 * must be used with other sanitizing functions.
+		 * @param string $value The value to be escaped.
+		 * @return string The escaped value.
+		 */
+		function edu_odata_quote( $value ) : string {
+			$escaped = str_replace( "'", "''", $value );
+
+			return "'" . $escaped . "'";
+		}
+	}
+
 	/**
 	 * @return EduAdmin_OData_Client
 	 */
